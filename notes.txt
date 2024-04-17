@@ -1,0 +1,843 @@
+----------Operators in JS-----------
+
+- Assignment operator: variable_name = value 
+  left side value will automatically assign on right side
+
+-Arithmetic Operators : + - * / % **
+
+-Relational Operators : > >= < <= = != ===
+
+-logical Operators: && || !
+
+-Spread Operator: ... used to expand a single variable
+
+- Rest Operator: ... used to combine rest of the data to a single array
+
+ if we use two relational operators it will not work properly so we use logical operators 
+ 5<x<7 it will not work in relational operator but in logical operator
+
+ 
+  
+  AND
+
+  T && T = T ( && operator work only in both true case)
+  T && F = F
+  F && T = F
+  F && F = F
+
+  OR
+
+  T||T = T 
+  T||F = T 
+  F||T = T 
+  F||T = F
+
+  NOT
+
+  !T = F
+  !F = T
+
+-Increment or Decrement Operators : ++ --
+pre-Increment ++value
+post-Increment value++
+
+pre-Decrement ++value
+post-Decrement value++
+
+
+
+-Short hand operators : += -=
+
+-Ternary operators : cond?cond true  : false
+                     if n>1 ? greater : lesser
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+----------Conditional Statements in JS------------
+
+
+
+ - if Statements
+     syntax : if (Condition) { if body: executes when Condition satisfy }
+
+ - if else Statements
+     syntax : if (Condition) { if body: executes when Condition satisfy } else {executes when Condition false}
+   
+ - else if ladders
+ - switch cases
+
+
+
+-------------- looping Statements in JS----------------
+
+
+
+- while loop 
+    syntax : 
+            1. Initialise a  variable with a value n=1
+            2. while (condition should includes that initailsed variable n<=5){
+              while body executes when condition become true
+             3. change the value of the variable that used in the condition n++
+            }
+
+            n=1
+            while(n<=5){
+              n++
+            }
+
+-for loop
+    syntax : 
+             for(1. Initialise a  variable with a value n=1; 2. for condition should includes that initailsed variable n<=5
+              while body executes when condition become true; 3. change the value of the variable that used in the condition n++)
+
+              for(n=1; n<=5; n++)
+
+        ---break statement---
+
+        break will break statement at the 
+
+               for(n=1; n<=5; n++){
+
+                    if(){
+                      break
+                    }
+
+                      }
+
+        ---continue statement---
+
+        break will skip only one statement and continue after the statement at the 
+
+               for(n=1; n<=5; n++){
+
+                    if(i==5){
+                      continue
+                    }
+
+                      }
+                  i skips only 5 
+
+
+-nested loop
+
+ used to create patterns
+ #     #     #     #
+ #     #     #     #
+ #     #     #     #
+ #     #     #     #
+
+
+-------------- Functions in JS----------------
+
+Use to do specific tasks during the code
+
+every Functions must have 2 parts in JS
+
+- Functions definition : defining the task to be performed
+    syntax : function function-name (parameters used to perform task){
+
+          defining task
+         }
+
+        eg: function navbar(){
+
+
+
+         }
+- Function call : to execute a function
+  syntax : function-name(arguments to be passed to the function Definintion)
+
+        navbar()
+
+-------------- Types of Function----------------
+
+ --Arrow function
+
+ function-name=(parameters)=>{
+  define task
+ }
+
+ sum = (n1) =>{
+
+  n + 1
+ }
+
+ - Predefined function : console.log(), Math.floor()
+ - Callback function : function definition inside another function call
+
+                       alert('Normal funtion')
+                       setTimeout(()=>{alert('Inside setTimeout !!!')},3000)
+
+ - Anonymous function : self executing function
+
+ - nested function
+
+
+ ------------Array-------------
+
+ - Used to hold multiple elements in a single variable by using its index numbers
+ - for of loop
+
+ --- for-of  method
+ --syntax : for(let var-name of array-name)
+            for(let day of weekDays)
+
+--- for-in method
+--syntax : for(let index name in array-name)
+           for
+
+----------pre-defined array methods for javascript------------
+
+    --Push method
+    -push method is used to insert an element to array
+    - the adding element will store at end
+    -push.arrayname("adding element")
+      eg: ara = [1, 2, 3, 4]
+
+      push.ara(5)
+
+      o/p = 1, 2, 3, 4, 5
+
+
+
+
+      --Unshift
+      - also used to insert an element
+      - adding element will store at start
+
+      -unshift.arrayname("adding element")
+        eg: ara = [1, 2, 3, 4]
+
+        push.ara(0)
+
+        o/p = 0, 1, 2, 3, 4, 5
+
+
+
+      --Pop method 
+      - pop method is used to remove element from an array
+      - remove the end element
+        -pop.arrayname()
+        eg: ara = [1, 2, 3, 4]
+
+        pop.ara()
+
+        o/p = 1, 2, 3, 4
+
+
+      --Shift method
+      - also used to remove an element
+
+
+
+      -- Sort method
+      - sort(comparison function)
+        sort(a-b) = ascending order
+        sort(b-a) = descending order
+
+      --forEach method
+      - alternative method to for for of 
+          syntax(Callback:(value,index,array)=> void)
+          not return any value but if we use map it will return a value
+
+      --map method
+      - return a new array with values after applying a mapping function to existing array
+
+      -- Filter method
+      -filter(callbackfn)
+      note
+      this only applicable for cases such as more than one outputs to be filter 
+      and also used as in conditions for and if when needed
+
+      --Find method
+      -find(callbackfn)
+
+      return an items satisfying the conditions of existing array
+
+      --reduce method
+      -reduce(callbackfn)
+
+      return smallest or largest or total sum of existing array
+
+      --reduceRight method
+      -reduceRight(callbackfn)
+
+
+      --some
+      -some(callbackfn)
+
+      return true or false based on a codition applied to all items in given array
+
+      --includes
+      -includes(key)
+
+      work same as some but it is only for a single value
+
+      --indexOf
+      -indexOf
+
+      To find the index of a give element
+
+      --splice
+      -splice(starting index, no .of items to be delete after starting index)
+
+      Used to remove an item from an array
+
+
+      --flat
+      -flat(depth)
+
+      used for 2 dimensional array convert to 1 dimensional array
+
+
+-------------------String----------------------
+  -----------Methods-------------
+
+  --substring
+  -substring(starting, ending)
+
+  eg: string = java
+      substring(0,4)
+
+      output: jav
+
+      eliminates 4th part for example it eliminates 'a' part from java
+
+  --slice
+  -slice(starting, ending)
+
+  eg: string = javascript
+      substring(0,-2)
+
+      output: javacri
+
+     Works same as substring but it we can use minus values on this method to remove last points,  eliminated last two parts array for example it eliminates 'pt' part from java
+
+  
+  --startsWith
+  -startsWith('ja')
+  
+    used to check true or false how it's starts with a particular letters
+
+  --endsWith
+  -endsWith('pt')
+
+      used to check  true or false how it's ends with a particular letters 
+
+  --includes
+  -includes('pt')
+
+      used to check whether substring present in a string
+  
+-----------------------Object--------------------------------
+
+we can't able to store the specific names of values in array object have a method to store values as key
+--- Key : To access a value from an object
+         syntax: object-name['key'] or object-name.key
+               eg: employee['empId'] or employee.empId
+--insert value to an exisi
+    
+  --in operator
+  -
+   used to check whether key is present or not
+
+  
+
+  --hasOwnProperty
+    
+    used to check a property present or not
+
+ --Object.values
+ -Object.values(object-name) : we will get values from an object
+
+    eg:   var car ={
+          name:"boleno",
+          model:"hatch-back",
+          manufacturer:"Maruti Suzuki",
+          price:"13 lakh"
+      }
+
+      o/p : "boleno", 
+
+    
+
+
+ --Object.keys(object-name) : return an array of keys
+
+
+ -----------------Object Oriented programming (OOPs)-------------
+ 
+ - Object : real time entity (eg: as say in terms in real world it is the object that can be seen in the world like car, laptop....)
+ - Class  : Blueprint of object (eg: alignment of elements like various object arrangement  inside a car or laptop, )
+ - Reference : used to refer property
+ - Constructor :
+ - Access Pointers : used to access the file if it is private it cannot be inherit but if it is protected it can be access by child class
+                    note: access pointers is not a exclusive oops feature
+ - Features of oops : inheritance, polymorphism, abstraction, encapsulation
+                     
+               -- Inheritance 
+
+                     - Classical Inheritance : Property of inherit the features of parent class to  child or copy the features that contain parent class
+                                   
+                                   uses keyword extends
+
+                                    syntax : class child extends parent{
+
+                                      in this code child class inherited parent featutres
+
+                                    }
+                     - Prototype Inheritance : Property of inherit the features of parent object it is used in object instead of classes
+
+                                  uses keyword __proto__
+
+                                  syntax : child.__proto__= Parent
+              
+
+
+               --Polymorphism : Property of polymorphism is used to use a funtion in multiple times polymorphism works partially on jss
+                                
+                                ... rest operator is used for polymorphism in jss
+
+             
+               --Abstraction : it will not show important data for example console.log, classes, we don't know what is the mechanism behind 
+
+
+               --Encapsulation : Data inside another data like class
+
+
+
+
+
+
+
+
+Math.floor will remove decimal 
+
+  eg Math.floor(135/10)
+  5 will remove
+
+  for concantenation one data must be in string
+
+  questions
+
+  - why jss known as dynamically changing programming language
+
+  --- if we assign a variable it's type will change automatically based on that variable
+  --- for example in c programme we need to assign what type of variable that we are going to add should mention above but in java we didn't to do that stuff 
+
+
+  what is Linear searching/ sequential searching  
+
+  search one by one or traditonal method of looping due to one by one method it is not a efficient method
+
+
+
+  To check efficienct
+ 
+
+----------------JSS - In Front End---------------- 
+ 
+ internal js
+ external js: 
+
+ DOM : Documetn Object model 
+     - A tree structure corresponding to a webpage, there will be a single root (html tag)
+     - js can access webpage / HTML elements via DOM using 'document' object
+
+ Selecting HTML elements to js code:
+  -using tag name: document.getElementBTagName('')
+  -using id name: document.getElementBId('')
+  -using class name: document.getElementBId('')
+  -using querySelector : document.querySelector('tag/ #id/ .class')
+  -using querySelectorAll : document.querySelectorAll('tag/#id/.class')
+
+  -- Event : Trigger by user actions
+   - Mouse Related Events : click, move, drag......
+   - Keyboard Related Events : keypressdown, keyup.........
+
+  -- Access or Update content of a tag
+   - innerHTML
+   - innerText
+
+   --Storages 
+    
+    -localStorage
+    -sessionStorage
+    -Methods : 
+             -setItem(key,value) 
+
+
+  --API (Application Programming Interface) : Used to communicate Application in the internet
+   
+
+   -URL (Uniform Resource Locator): 
+
+        eg: http://127.0.0.1:5500/login-page/index.html/users/1
+        1 is the path parameter
+
+    -base URL
+      eg: http://127.0.0.1:5500/login-page/index.html
+   
+   -URI (Uniform Resource Identifier) 
+
+      eg: http://127.0.0.1:5500/login-page/index.html/users
+
+   Query parameter
+  
+   eg: https://www.bing.com/search?q=jsonplaceholder+typicode&cvid=2cbf8f76f9af482f920efe0125244a6d&gs_lcrp=EgZjaHJvbWUqBggCEAAYQDIGCAAQRRg5MgYIARAAGEAyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAAGEAyBggIEAAYQNIBCDU5MzhqMGo0qAIAsAIA&FORM=ANAB01&ucpdpc=UCPD&PC=U531
+
+   after ? queryparameter will start
+
+   Body parameters 
+   - Types of API
+     - client server
+        - REST API (architectural structure) : Protocol : HTTP, JSON  in data sharing between 2 sites whether 2 sites is build in 2 different  languages a common thing will be there that is 
+
+                JSON - Java Script Object Notation
+                - {in JSON "key" must only in string}
+
+
+        - SOAP API (architectural structure) : Protocol : HTTP, architectural XML
+
+        - GRAPHL 
+
+        -HTTP Requests 
+         - GET - To get a data from server to client
+         - POST - to insert/add to server from the client, for example client need to register name post is used here
+         - PUT  - to edit update existing data to server from client, client need to update profile
+         - DELETE - to remove data from server, 
+
+         -HTTP Response code / Status code - To identify client Requests by browser systems doesn't know natural language so based on status code language is identified 
+
+          -1xx series: Informational
+          -2xx series: Success
+          -3xx series: Redirection
+          -4xx series: Client error
+          -5xx series: Server error
+
+  -Resolving Function Call in JS
+    
+    -Synchronous Function : if a function excutes without delay it said to be Synchronous function 
+                            eg: console.log
+   
+   -Asynchronous Function : if a function excutes with delay it said to be Synchronous function
+                            eg: setTimeout(), callbackfn
+            
+            -Resolving Asynchronous Functions
+                         -if we use callback to resolve Asynchronous function it may lead,
+                         'Callback Hell' : Nesting of callback function scenario
+
+                         - Promise : Avoid callback hell
+                          It has two states 
+
+                          - Resolved State :then : use then method to get the Response
+                          - Reject state :catch : use catch method to get the reason to fail the function call
+                          - Pending state : waiting duration to get response for Asynchronous function call
+
+
+
+
+    -------------------------------------call stack---------------------------------------------
+
+     js is a single threaded programming language
+
+     -----------Synchronous call stack is only used in js that is only single stack is used---------
+
+     --------Asynchronous queue-------
+
+      but Asynchronous queue callbackfn will not store in Synchronous directly firstly it stored in Asynchronous queue
+        
+      API and callback is stored in two different data,
+
+        API stored in Microtask Queue, 
+        It is developed using Priority Queue, ie, it has more importance first like vip passed
+
+        callback function 
+        is stored in Callback Queue
+        
+       ------Event loop-----
+        
+        All will work under event loop it is a infinity loop it will check whether call stack is empty or nor if call stack is empty it will pass data from Microtask queue and after that it will alow callback queue
+        -------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+       API Call using JS
+
+        - using XMLHTTPRequest : AJAX (Asynchronous JS and XML)
+        - fetch() : fetch will return promise
+        - axios library (it's an external library) : return promise
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------REACT--------------------------------------------------------------------------------------
+
+   -Basics
+
+      - REACT app is a collection of different library
+      - Components: Part of User Interface
+      - REACT app is a collection of Components
+      - Components are arranged in a tree structure
+      - There will be a root component in React app which is commonly known as 'App'
+
+      - We can create single page applications using REACT
+      - Pure functions : Used to create react functional component
+      - Declarative approach 
+      - Virtual DOM
+      - Reconciliation : The process of detecting the changes in dom that has been done by the developer
+
+      - JSX (Javascript XML) : (language used to write code in React) used to display content in browser
+
+
+  ---------------Rules for using JSX------------------- 
+  
+     - Every JSX elements(like html tags) must be inside a single parent tag
+     - Parent tag can be any container tag/ react fragment(<>....</> - we can able to create empty tags its known as react fragment)
+     - Every tag should have a closing (like html tags <br> <hr> we cannot able to give like this it should need a closing, instead of this we use <br/>(self closing tags))
+     - Every attribute should be in camelCase
+     - Instead of Attribute 'class' is 'className' in react
+     - Instead of Attribute 'for' use 'htmlFor' in JSX
+     - Instead of using tag/id.innerHTML JSX use {js-expressions} To provide JS expressions {js-expressions}
+ 
+ ----------------REACT App creation------------------
+
+     - CRA (use create-react-app command) - But it was so slow  on starting time so they used another method called 'Vite'
+
+     -Vite : Vite is used to create react Application
+          - To work this it need to work  globally
+          - To Install globally : npm i -g create-vite
+          - To install react app using veat : npm create vite@latest
+                    press y to proceed        Ok to proceed? (y) y
+                    Enter the project name    √ Project name: ... demo-project
+                    select the framework      √ Select a framework: » React
+                    select the language       √ Select a vaTriant: » JavaScript
+
+          - change director to the project folder by entering the key cd with folder name
+                   cd demo-project
+          
+          -To work this project it need node modules npm configuration file (package.json) there is dependencies it found the version and install from internet
+          
+
+          npm install
+
+         - To run the code just enter the command: 'npm run dev'
+         
+         - Babel library is used to transpile JSX code to simple react function which is understood by browser
+
+
+         or
+
+         - react project using vite - npm create vite@latest project-name -- --template react
+
+  ----------------------------------------Folders------------------------------------------------
+
+          package.json      :  npm configuration file
+
+          package-lock.json :  It contain all version history of all packages installed in the project
+
+          .gitignore file   :  Contains files/folders name which is ignored while adding to git
+
+          README.md         :  give information or description about the file
+
+          index.html        :  projects index page or starting page or a entry html page for react app
+
+          node-module       :  used to hold copies of dependent libraries of react project (we can install using npm install command)
+
+          public folder     :  react project can access data sorted in public folder as Globally
+
+          src folder        : it defines react app
+                    
+                    assets folder : have media files
+                    main.jsx      : create ReactDOM with parent node as div 
+
+
+        
+  ----------------------------------------Features-------------------------------------------------------
+
+        - Virtual DOM
+
+        - High Performance
+
+        - Data Binding/ Data sharing: One way binding(from parent to chilld)  
+
+        - Components  : Part of User Interface
+
+          - General rules for creating Components, we can create components using js and jsx files
+            
+            -create a js/jsx file, file name must starts with Capital letter
+
+        
+          - Different types of Components
+
+              - Class based Components  : use class to create component it can inherit react component class
+
+                  - Statefull Component : It can create state
+
+              - Functional Based Components : use function to create component, return must be jsx
+
+                  - Stateless Component  : It cannot create state 
+
+              -Life cycle methods of react components
+
+                - Mounting Phase : Putting jsx to DOM
+                  
+                  - constructor()
+                  - getDerivedStateFromProps() 
+                  - render()
+                  - componentDidMount()
+
+                - Updating Phase : When component is Updating
+
+                  - getDerivedStateFromProps()
+                  - shouldComponentUpdate()
+                  - render()
+                  - getSnapshotBeforeUpdate()
+                  - componentDidUpdate()
+
+                - Unmounting Phase : Removing component from DOM     
+
+                  - componentWillUnmount()
+
+
+      -Props : Property of a object, using props a Component can get the shared data from its parent
+
+
+   ---------------------------------------------- Styling In React Using CSS-----------------------------------------------
+    
+     - Using inline CSS : syntax : style={{property:value}}
+                          
+                          note: make it a single word using camel case 
+    
+    - Using external CSS : import css file 
+
+    - CSS module files : file with extension name.emodule.css
+
+  -------------------------------------------------- React Events ---------------------------------------------------------
+
+     React Event Binding
+      
+      - Binding a function without arguments : event={function-name}  
+
+      - Binding a function with arguments : event = {()=> function-name(arg)}
+
+      - Binding a function with arguments as event : event = {(e)=> function-name(e)}
+
+  
+
+  --------------------------------------------------Conditional Rendering--------------------------------------------------
+
+     Based on a condition we can control the jsx element in browser
+
+     - if statement : use operator &&
+
+     - if - else statement : use operator ?:
+
+
+ -----------------------------------------------------react state--------------------------------------------------------------
+
+   Is an object used to store data/ information regarding a component, whenever state changes the component re-renders, to update
+   the values lively
+
+   - setState() is used to update the values
+
+
+
+
+
+
+  -----------------------------------------------------vs shortcuts-----------------------------------------------------------
+
+    - rfce : react functional component export
+    - rcc : react class based component
+
+  
+  ------------------------------------------------------React hooks-----------------------------------------------------------
+
+   It's a pre-defined funtions used to provide react component features to functional component
+
+    - Hooks are function with function name starts with 'use' keyword
+    - To use a hook in functional component, we must call the hook
+    - Rule for calling hooks in functional component
+       - Import hook from react, in component
+       - Hooks can called at the top level of a component
+       - Hooks cannot be conditional (if-else condition)
+      
+    - Types of Hooks
+       
+       - Predefined Hooks
+         - useState(initial-value) : to help functional component to create state 
+             -syntax : const [state-name, state updating function name] = useState(initial-value)
+
+         - useEffect(function, dependency) : Used to provide side effects to your component
+             - function : used define side effects applied to component
+             - dependency : based on dependency, useEffect will get called
+                -no dependency : useEffect hook will call all time in component
+                -[] : useEffect hook will call only at the time component creation
+                -[data] : useEffect hook will call at the time in component creation as well as data changes
+
+       - Customised Hook :
+         - Create a function with name starts with 'use' keyword file name should be 'useName'
+      
+       - Handling list using React :
+
+         - using 'map' method
+         - to uniquely identifying each item in a list use 'key' attribute in component  
+
+
+  ------------------------------------------------------React forms----------------------------------------------------------------------
+
+   - Controlled components : data changes in the form is handled by the component by storing its state using change event
+
+   - Uncontrolled components : form handled by real DOM
+
+
+  ------------------------------------------------------React Styling libraries-----------------------------------------------------------
+
+   Material ui : npm install @mui/material @emotion/react @emotion/styled
+ 
+
+
+
+
+   ------------------------------------------------------Questions-------------------------------------------------------
+
+   ?--Difference between framework and library
+
+        in framework anything can be access
+        library needs so many other libraries
+
+  ?-- why REACT
+
+     if we give small change in a single element it will affect in entire browser to load in case complex websites it results heavy loading time REACT has virtual DOM feature in it 
+
+    meta will update if there is any bug found on the language within a small amount of time
+        
+  ?-- Difference between functional and class based components
+
+     
+      Functional Component                                               Class Component                                        
+    ---------------------------------------------------------------------------------------------------------------------------------    
+       JS pure function accpts props return jsx                          Class extended from react component its render function
+                                                                         return jsx element
+      
+       It executes from top to bottom once it retruns jsx                Class component alive depending on different life cycle
+       then it cannot be alive
+
+       Stateless component                                               Statefull component
+
+       Hooks are used                                                    Hooks are not used in class based component
+
+       No need render function                                           It requires render to return jsx
+
+       No need of constructor                                            Constructor used to intialise state
+
+
+
+
+
+
+
+
+     
+
+
+
+
